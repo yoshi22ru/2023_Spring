@@ -15,7 +15,7 @@ D:/Unity自作ゲーム/2023_Spring
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-50393
+50478
 Successfully changed project path to: D:/Unity自作ゲーム/2023_Spring
 D:/Unity自作ゲーム/2023_Spring
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/Unity自作ゲーム/2023_Spring
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7796] Host "[IP] 192.168.10.101 [Port] 0 [Flags] 2 [Guid] 3133579495 [EditorId] 3133579495 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4IH0O9C) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [38596] Host "[IP] 192.168.10.101 [Port] 0 [Flags] 2 [Guid] 298690103 [EditorId] 298690103 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4IH0O9C) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [7796] Host "[IP] 192.168.10.101 [Port] 0 [Flags] 2 [Guid] 3133579495 [EditorId] 3133579495 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4IH0O9C) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [38596] Host "[IP] 192.168.10.101 [Port] 0 [Flags] 2 [Guid] 298690103 [EditorId] 298690103 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-4IH0O9C) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 74.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 71.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path D:/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -67,75 +67,75 @@ Initialize mono
 Mono path[0] = 'D:/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'D:/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56744
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001713 seconds.
+Registered in 0.001585 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 82.38 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 71.01 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.539 seconds
+- Completed reload, in  0.468 seconds
 Domain Reload Profiling:
-	ReloadAssembly (540ms)
-		BeginReloadAssembly (62ms)
+	ReloadAssembly (468ms)
+		BeginReloadAssembly (54ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (393ms)
-			LoadAssemblies (62ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (340ms)
+			LoadAssemblies (52ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (93ms)
+			SetupTypeCache (80ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (233ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (203ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (82ms)
+				RefreshPlugins (71ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (103ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
+				ProcessInitializeOnLoadAttributes (91ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004317 seconds.
+Registered in 0.003500 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.801 seconds
+- Completed reload, in  0.796 seconds
 Domain Reload Profiling:
-	ReloadAssembly (802ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (796ms)
+		BeginReloadAssembly (80ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (626ms)
-			LoadAssemblies (64ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (633ms)
+			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (208ms)
+			SetupTypeCache (207ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (287ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (294ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (194ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (197ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -143,13 +143,151 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3547 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 40 unused Assets / (185.5 KB). Loaded Objects now: 4008.
 Memory consumption went from 129.5 MB to 129.3 MB.
-Total: 2.486400 ms (FindLiveObjects: 0.277000 ms CreateObjectMapping: 0.088800 ms MarkObjects: 2.000100 ms  DeleteObjects: 0.119200 ms)
+Total: 2.873400 ms (FindLiveObjects: 0.228200 ms CreateObjectMapping: 0.076800 ms MarkObjects: 2.427900 ms  DeleteObjects: 0.139400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 20493.594279 seconds.
+  path: Assets/Decrepit Dungeon LITE/Prefabs/Pillars/Pillar_A.prefab
+  artifactKey: Guid(b93fbb2e189612641be84b2521736734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Decrepit Dungeon LITE/Prefabs/Pillars/Pillar_A.prefab using Guid(b93fbb2e189612641be84b2521736734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6988be522c02a562fc6a90a0a860defc') in 0.096638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.276406 seconds.
+  path: Assets/Decrepit Dungeon LITE/Prefabs/Doors/Door_A.prefab
+  artifactKey: Guid(4aa5a7ef56dd26f4d8cdad18e6dd51d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Decrepit Dungeon LITE/Prefabs/Doors/Door_A.prefab using Guid(4aa5a7ef56dd26f4d8cdad18e6dd51d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76b9a698b67ae9ba1adbc9912a9a64e4') in 0.012681 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Decrepit Dungeon LITE/Prefabs/Doors/Door_D.prefab
+  artifactKey: Guid(6a07feca79d15f84d83a75c6432bd05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Decrepit Dungeon LITE/Prefabs/Doors/Door_D.prefab using Guid(6a07feca79d15f84d83a75c6432bd05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac96b825052b11c6a34e022b34899aa') in 0.015944 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003377 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.841 seconds
+Domain Reload Profiling:
+	ReloadAssembly (842ms)
+		BeginReloadAssembly (115ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (656ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (221ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (299ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (55ms)
+				ProcessInitializeOnLoadAttributes (205ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3531 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (153.0 KB). Loaded Objects now: 4031.
+Memory consumption went from 132.6 MB to 132.5 MB.
+Total: 2.971400 ms (FindLiveObjects: 0.512100 ms CreateObjectMapping: 0.088200 ms MarkObjects: 2.263900 ms  DeleteObjects: 0.105900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 59.177644 seconds.
+  path: Assets/Decrepit Dungeon LITE/Prefabs/Props
+  artifactKey: Guid(e12291f29b279bb4ab9fc5c688036ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props using Guid(e12291f29b279bb4ab9fc5c688036ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '306cdce0cdaf48f81f810551c228a420') in 0.006197 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003298 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.782 seconds
+Domain Reload Profiling:
+	ReloadAssembly (782ms)
+		BeginReloadAssembly (107ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (608ms)
+			LoadAssemblies (66ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (201ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (275ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+				ProcessInitializeOnLoadAttributes (189ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3531 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (152.9 KB). Loaded Objects now: 4046.
+Memory consumption went from 132.7 MB to 132.5 MB.
+Total: 2.841200 ms (FindLiveObjects: 0.319100 ms CreateObjectMapping: 0.139800 ms MarkObjects: 2.270000 ms  DeleteObjects: 0.110000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -165,28 +303,28 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003557 seconds.
+Registered in 0.003067 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.809 seconds
+- Completed reload, in  0.779 seconds
 Domain Reload Profiling:
-	ReloadAssembly (810ms)
-		BeginReloadAssembly (111ms)
+	ReloadAssembly (780ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (629ms)
-			LoadAssemblies (64ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (607ms)
+			LoadAssemblies (61ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (223ms)
-			ReleaseScriptCaches (1ms)
+			SetupTypeCache (204ms)
+			ReleaseScriptCaches (2ms)
 			RebuildScriptCaches (35ms)
 			SetupLoadedEditorAssemblies (273ms)
 				LogAssemblyErrors (0ms)
@@ -194,391 +332,19 @@ Domain Reload Profiling:
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (50ms)
-				ProcessInitializeOnLoadAttributes (190ms)
+				ProcessInitializeOnLoadAttributes (188ms)
 				ProcessInitializeOnLoadMethodAttributes (22ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3531 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (152.9 KB). Loaded Objects now: 4023.
-Memory consumption went from 128.1 MB to 128.0 MB.
-Total: 3.419600 ms (FindLiveObjects: 0.350400 ms CreateObjectMapping: 0.123500 ms MarkObjects: 2.816200 ms  DeleteObjects: 0.128400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 18710.898787 seconds.
-  path: Assets/Decrepit Dungeon LITE/EXAMPLE/Demo_Scene.unity
-  artifactKey: Guid(14a2c64dbd956d346b9f674d144cc297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/EXAMPLE/Demo_Scene.unity using Guid(14a2c64dbd956d346b9f674d144cc297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d504182630bad1e91bd1715f36632cf') in 0.006486 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 21.801851 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Walls
-  artifactKey: Guid(91814bd9abb6b2649821260851eb36e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Walls using Guid(91814bd9abb6b2649821260851eb36e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3b463dcd70939f407b119eb775de7c') in 0.000999 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.228754 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Stairs/Stairs_A.prefab
-  artifactKey: Guid(b5e6d0f89d317b146a5e063b6c80a8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Stairs/Stairs_A.prefab using Guid(b5e6d0f89d317b146a5e063b6c80a8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a4069eac63758149c812d8a235c0653') in 0.104043 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Stairs/Stairs_C.prefab
-  artifactKey: Guid(ad0f936da1b94df47a67bc558a9ccff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Stairs/Stairs_C.prefab using Guid(ad0f936da1b94df47a67bc558a9ccff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba42ac5eeb01cf0de05416c6819815bf') in 0.021582 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Stairs/Stairs_F.prefab
-  artifactKey: Guid(7c84b5794225d8a4ca0500ec37701101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Stairs/Stairs_F.prefab using Guid(7c84b5794225d8a4ca0500ec37701101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37f949ac672056924a9579cba530c1b9') in 0.011685 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.730091 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Arch_Gate.prefab
-  artifactKey: Guid(e8509d0bc33ac9c4088232205ccc9352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Arch_Gate.prefab using Guid(e8509d0bc33ac9c4088232205ccc9352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd91baa47d7cf446c6f54f4f230f9a3f5') in 0.010263 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Chain_B.prefab
-  artifactKey: Guid(58f563355aadeb3449ef8dea38d684a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Chain_B.prefab using Guid(58f563355aadeb3449ef8dea38d684a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1380a1d8f9543b987bb5285a1740a1') in 0.012588 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Table_A.prefab
-  artifactKey: Guid(455e91ef9a68edd4ca1a9bba2ffccad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Table_A.prefab using Guid(455e91ef9a68edd4ca1a9bba2ffccad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e801ba2d6ec2f5b7483b23e7f0cc7d0') in 0.011234 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Hanging_Cage.prefab
-  artifactKey: Guid(443b16cc2c749c1449edeccb23f05576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Hanging_Cage.prefab using Guid(443b16cc2c749c1449edeccb23f05576) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '553689788c24bed3aafe62ebbb92d01d') in 0.009011 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Floor_Gate.prefab
-  artifactKey: Guid(8377b28f368c45d4199bae71a2a5eabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Floor_Gate.prefab using Guid(8377b28f368c45d4199bae71a2a5eabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dd2c8bd697abf3b4e55e003363e385b') in 0.007517 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Tunnel_Grate.prefab
-  artifactKey: Guid(257faedffa691514790c7fffb4046c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Tunnel_Grate.prefab using Guid(257faedffa691514790c7fffb4046c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1ad2f859c4ad1f69711c5adb91afbce') in 0.008951 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Crate_C.prefab
-  artifactKey: Guid(e9304edb27ba2474ca3a050aa5bc741b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Crate_C.prefab using Guid(e9304edb27ba2474ca3a050aa5bc741b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef4101abddc07bab6e204b7a9e294c6') in 0.011667 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Ladder.prefab
-  artifactKey: Guid(7bade91c709d500478a3cdaa697994d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Ladder.prefab using Guid(7bade91c709d500478a3cdaa697994d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5182bcf8598a98092591108d405782') in 0.008384 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Floor_Cage.prefab
-  artifactKey: Guid(08e1ecba9be6e5b418edf1bf869b4e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Floor_Cage.prefab using Guid(08e1ecba9be6e5b418edf1bf869b4e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0bf0bd02cfbdab020d545c3d66dd240') in 0.009493 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Tunnel_Grate_Broken.prefab
-  artifactKey: Guid(3cee1252b3c2c9644a890b8c04e80479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Tunnel_Grate_Broken.prefab using Guid(3cee1252b3c2c9644a890b8c04e80479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc94e74718990c43b6bae8614f7515cc') in 0.009753 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Bucket.prefab
-  artifactKey: Guid(ca7ff24101826a141b95bc27f8d49174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Bucket.prefab using Guid(ca7ff24101826a141b95bc27f8d49174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48a42babbfa72aa9e8440c1554fd9c9c') in 0.010043 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Candles.prefab
-  artifactKey: Guid(9399e3d779d8660489d87c9559841721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Candles.prefab using Guid(9399e3d779d8660489d87c9559841721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '476c50607fad0fa64852ed49967e7c95') in 0.014740 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Stool_A_Broken.prefab
-  artifactKey: Guid(eb9a0a0315e3a16499b4caa557a46bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Stool_A_Broken.prefab using Guid(eb9a0a0315e3a16499b4caa557a46bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ebb2f25e82009ecab4c58662f65e25') in 0.009717 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Props/Chain_D.prefab
-  artifactKey: Guid(065afdc0580dbbe498b318b35d182112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Props/Chain_D.prefab using Guid(065afdc0580dbbe498b318b35d182112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a9cbe4c515d72b7d97c51f018af3d18') in 0.012611 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.806530 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Pillars/Pillar_A.prefab
-  artifactKey: Guid(b93fbb2e189612641be84b2521736734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Pillars/Pillar_A.prefab using Guid(b93fbb2e189612641be84b2521736734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a80c5f6d6c440ed505a614aaf3edb9ed') in 0.010487 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Pillars/Pillar_F.prefab
-  artifactKey: Guid(8811c9285b2bf334fb3e80d71c9e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Pillars/Pillar_F.prefab using Guid(8811c9285b2bf334fb3e80d71c9e001b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be20de8b40a5bc927c6a1c4d0e600eb5') in 0.011530 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.205630 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Floors/Floor_A.prefab
-  artifactKey: Guid(b2f96746c6005c64888263f64272a556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Floors/Floor_A.prefab using Guid(b2f96746c6005c64888263f64272a556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e86c963b5b700b110338fb592255d32e') in 0.008984 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.491088 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Doorways/Doorway_A.prefab
-  artifactKey: Guid(10f6c197dbc5b3d4bb207a1bd7921eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Doorways/Doorway_A.prefab using Guid(10f6c197dbc5b3d4bb207a1bd7921eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8f4ec22bc58600c80b391e067436cc5') in 0.011444 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.111124 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Doors/Door_A.prefab
-  artifactKey: Guid(4aa5a7ef56dd26f4d8cdad18e6dd51d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Doors/Door_A.prefab using Guid(4aa5a7ef56dd26f4d8cdad18e6dd51d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10f9258a6836ff0d94a763da2b0bcb8e') in 0.011467 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.280401 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Decals/Grunge_A.prefab
-  artifactKey: Guid(fcbd3be90bc4c7f4080b171503d710dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Decals/Grunge_A.prefab using Guid(fcbd3be90bc4c7f4080b171503d710dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb5d18b2d90f9104a39db35c2ba015b0') in 0.010946 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Decals/Hay_A.prefab
-  artifactKey: Guid(db376d84db5f60748b98e9a47b6770ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Decals/Hay_A.prefab using Guid(db376d84db5f60748b98e9a47b6770ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14c742487c4e2951a28adfe6a0b2f21') in 0.010077 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Decals/Grunge_F.prefab
-  artifactKey: Guid(cd2bddb9961304741bb667a4a663f581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Decals/Grunge_F.prefab using Guid(cd2bddb9961304741bb667a4a663f581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1089ed217ba790720186d39663f93f5') in 0.012039 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.918297 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Arches/Arch_A.prefab
-  artifactKey: Guid(de3b8c31d809a0442bdf5e22edaf92be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Arches/Arch_A.prefab using Guid(de3b8c31d809a0442bdf5e22edaf92be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0260f2a9cfb01e1a25509974df7f8d') in 0.012446 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 21.771580 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Walls/Ceiling.prefab
-  artifactKey: Guid(9947a6e7e8c8208469c1c86e15f5c089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Walls/Ceiling.prefab using Guid(9947a6e7e8c8208469c1c86e15f5c089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ef4becdc2f46305097843c192db2836') in 0.015863 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Walls/Wall_B.prefab
-  artifactKey: Guid(ce73a35450ff20d4ab05c1f0c3cec2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Walls/Wall_B.prefab using Guid(ce73a35450ff20d4ab05c1f0c3cec2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f0e7d5c56ecdba9786fb150084faad2') in 0.010443 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Walls/Wall_A_Corner.prefab
-  artifactKey: Guid(24579a71f306fa349abdad24a69e4d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Walls/Wall_A_Corner.prefab using Guid(24579a71f306fa349abdad24a69e4d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb1f61dd608698768305a693132107b') in 0.019019 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 19.970424 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Torch.prefab
-  artifactKey: Guid(f2a67bfde37c7e14b936def14f7ad712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Torch.prefab using Guid(f2a67bfde37c7e14b936def14f7ad712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8dc0ab5b3eea3d31f3d47ed5d80860') in 0.009933 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.193242 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Torch Variant.prefab
-  artifactKey: Guid(db70d14f953d3d948b8111daf2c2f1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Torch Variant.prefab using Guid(db70d14f953d3d948b8111daf2c2f1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438d04644371582772d60e244c9f840e') in 0.011068 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.411976 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Torch Variant.prefab
-  artifactKey: Guid(db70d14f953d3d948b8111daf2c2f1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Torch Variant.prefab using Guid(db70d14f953d3d948b8111daf2c2f1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1f88f096b525b43b18a1fd220cb3704') in 0.002449 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 27.742301 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Candles.prefab
-  artifactKey: Guid(0c4414ecb08dc9345af3b51c283f6a14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Candles.prefab using Guid(0c4414ecb08dc9345af3b51c283f6a14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2a245d1c3e2c60c7c4a5352a264a8f1') in 0.012663 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.963086 seconds.
-  path: Assets/Decrepit Dungeon LITE/Prefabs/Torch Variant.prefab
-  artifactKey: Guid(db70d14f953d3d948b8111daf2c2f1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Prefabs/Torch Variant.prefab using Guid(db70d14f953d3d948b8111daf2c2f1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b042ba9a0e1c73deb6755c34f11ff8b') in 0.009740 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.566416 seconds.
-  path: Assets/Decrepit Dungeon LITE/Meshes/Arches.fbx
-  artifactKey: Guid(c5a0cbaff03e01547841e9d71417ea60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Meshes/Arches.fbx using Guid(c5a0cbaff03e01547841e9d71417ea60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb388243b373094459da1e9dc2e77444') in 0.050162 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Decrepit Dungeon LITE/Meshes/Pillars.fbx
-  artifactKey: Guid(8e32c35cdca5d9f4b95e36a496a3b596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Meshes/Pillars.fbx using Guid(8e32c35cdca5d9f4b95e36a496a3b596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e7ab3719358aad01f2319f3a366d302') in 0.044864 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Decrepit Dungeon LITE/Meshes/Stairs.fbx
-  artifactKey: Guid(cbcb05563ab6bb046867a0b483b15cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Meshes/Stairs.fbx using Guid(cbcb05563ab6bb046867a0b483b15cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14183b7723b6a796807d93e2362df7c') in 0.042778 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Decrepit Dungeon LITE/Meshes/Doors.fbx
-  artifactKey: Guid(c2155ffe2a264a143a77825d2c95977d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Meshes/Doors.fbx using Guid(c2155ffe2a264a143a77825d2c95977d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd3632873dad9e17744efae538a0a46a') in 0.037917 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Decrepit Dungeon LITE/Meshes/Walls.fbx
-  artifactKey: Guid(6c823a569ab4348479597ed4693bc618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Meshes/Walls.fbx using Guid(6c823a569ab4348479597ed4693bc618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40e98f0c9cbfcec08aff87d61c742f91') in 0.085692 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Decrepit Dungeon LITE/Meshes/Doorways.fbx
-  artifactKey: Guid(97fa12cc510c6864b90512c53eb8df40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Decrepit Dungeon LITE/Meshes/Doorways.fbx using Guid(97fa12cc510c6864b90512c53eb8df40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca920350e16c10bc0b303c2f320f068') in 0.030279 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.850119 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87cf3f900dc635351904bbc3190073f9') in 0.000863 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003191 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.824 seconds
-Domain Reload Profiling:
-	ReloadAssembly (824ms)
-		BeginReloadAssembly (106ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (35ms)
-		EndReloadAssembly (650ms)
-			LoadAssemblies (61ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (213ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (299ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (52ms)
-				ProcessInitializeOnLoadAttributes (201ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.93 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3531 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (153.1 KB). Loaded Objects now: 4049.
-Memory consumption went from 133.0 MB to 132.9 MB.
-Total: 3.394300 ms (FindLiveObjects: 0.262100 ms CreateObjectMapping: 0.104000 ms MarkObjects: 2.893400 ms  DeleteObjects: 0.133500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003282 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity自作ゲーム\2023_Spring\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.821 seconds
-Domain Reload Profiling:
-	ReloadAssembly (822ms)
-		BeginReloadAssembly (103ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (32ms)
-		EndReloadAssembly (649ms)
-			LoadAssemblies (63ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (211ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (279ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (48ms)
-				ProcessInitializeOnLoadAttributes (196ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.98 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3531 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (153.0 KB). Loaded Objects now: 4064.
-Memory consumption went from 133.0 MB to 132.9 MB.
-Total: 3.517700 ms (FindLiveObjects: 0.326900 ms CreateObjectMapping: 0.140100 ms MarkObjects: 2.918900 ms  DeleteObjects: 0.130500 ms)
+Unloading 21 unused Assets / (152.9 KB). Loaded Objects now: 4061.
+Memory consumption went from 132.7 MB to 132.5 MB.
+Total: 3.520800 ms (FindLiveObjects: 0.315000 ms CreateObjectMapping: 0.136100 ms MarkObjects: 2.914300 ms  DeleteObjects: 0.153100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
