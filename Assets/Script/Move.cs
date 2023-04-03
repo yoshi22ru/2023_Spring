@@ -20,11 +20,11 @@ public class Move : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             animator.SetBool("Walk", true);
 
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space)&&stamina>0)
             {
                 transform.position += transform.forward * 0.08f;
                 stamina = stamina - (Time.deltaTime * 10);
