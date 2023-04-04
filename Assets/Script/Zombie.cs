@@ -15,52 +15,84 @@ public class Zombie : MonoBehaviour
     [SerializeField]
     private float searchAngle = 230f;
     [SerializeField] AudioClip searchSE;
-    AudioSource audiosource;
+    AudioSource audio;
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
-        audiosource = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        Vector3 walk = new Vector3(0.0f, 0.0f, -60.0f);
+        Vector3 run = new Vector3(0.0f,0.0f,-100.0f);
+
         distance = Vector3.Distance(this.transform.position, player.transform.position);
-        if(search==true)
+        if (distance < 2)
+        {
+            rb.velocity = Vector3.zero;
+            animator.SetTrigger("Attack");           
+        }
+        if (search==true)
         {
             animator.SetBool("Run", true);
-            transform.position += transform.forward * 0.056f;
+            //transform.position += transform.forward * 0.056f;
             this.transform.LookAt(player.transform);
-        }
-        if (distance < 2.0)
-        {
-            animator.SetTrigger("Attack");
-            transform.position += transform.forward * 0f;
+            rb.AddForce(run);
         }
         else
         {
             animator.SetBool("Run", false);
-            transform.position += transform.forward * 0.04f;
-        }
-
-       
+            //transform.position += transform.forward * 0.04f;
+            rb.AddForce(walk);
+        }     
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerStay(Collider other)
     {
+        if(other.tag == "Player")
+        {
+            //主人公の方向
+            var playerDirection = other.transform.position - transform.position;
+            //敵の前方からの主人公の方向
+            var angle = Vector3.Angle(transform.forward, playerDirection);
+
+            //サーチする角度内なら発見
+            if(angle>searchAngle)
+            {
+                search = true;
+            }
+        }      
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag=="Player")
+        {
+            //主人公の方向
+            var playerDirection = other.transform.position - transform.position;
+            //敵の前方からの主人公の方向
+            var angle = Vector3.Angle(transform.forward, playerDirection);
+
+            if (angle>searchAngle)
+            {
+                audio.PlayOneShot(searchSE);
+            }
+        }
+    }
+
+
+    private void OnTriggerExit(Collider other)
+    { 
         if (other.tag == "Player")
         {
             search = false;
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            search = true;
         }
     }
 
