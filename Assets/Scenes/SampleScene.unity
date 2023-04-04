@@ -796,11 +796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09749095509c99b4eab7b63f3f2bf41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxAngularSpeed: Infinity
-  _smoothTime: 0.1
-  _transform: {fileID: 0}
-  _prevPosition: {x: 0, y: 0, z: 0}
-  _currentAngularVelocity: 0
 --- !u!1 &58976127
 GameObject:
   m_ObjectHideFlags: 0
@@ -12283,7 +12278,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1157328794
 Transform:

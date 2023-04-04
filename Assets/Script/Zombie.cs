@@ -33,19 +33,18 @@ public class Zombie : MonoBehaviour
         distance = Vector3.Distance(this.transform.position, player.transform.position);
         if (distance < 2)
         {
-            rb.velocity = Vector3.zero;
             animator.SetTrigger("Attack");           
         }
         if (search==true)
         {
             animator.SetBool("Run", true);
-            transform.position += transform.forward * 0.056f;
+            transform.position += transform.forward * 0.04f;
             this.transform.LookAt(player.transform);
         }
         else
         {
             animator.SetBool("Run", false);
-            transform.position += transform.forward * 0.04f;
+            transform.position += transform.forward * 0.03f;
         }     
     }
 
@@ -59,7 +58,7 @@ public class Zombie : MonoBehaviour
             var angle = Vector3.Angle(transform.forward, playerDirection);
 
             //サーチする角度内なら発見
-            if(angle>searchAngle)
+            if(angle > searchAngle)
             {
                 search = true;
             }
