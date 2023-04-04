@@ -12,14 +12,26 @@ public class Move : MonoBehaviour
 
     public float stamina;
     public Slider stamina_slider;
+    public GameObject enemy;
+    public float distance;
+    [SerializeField] AudioClip heartSE;
+    AudioSource audio;
 
     void Start()
     {
+        Application.targetFrameRate = 120;
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
         animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
     {
+        distance = Vector3.Distance(this.transform.position, enemy.transform.position);
+        Ray ray = new Ray(new Vector3(0,1,0),new Vector3(1,0,0));
+        Vector3 origin = ray.origin;
+        Vector3 direction = ray.direction;
+
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             animator.SetBool("Walk", true);
@@ -78,5 +90,28 @@ public class Move : MonoBehaviour
             transform.Rotate(0.0f, -2.0f,0.0f);
         }
 
+        Debug.DrawRay(ray.origin ,ray.direction*30,Color.red, 5.0f);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            StartCoroutine("GameOverScene");
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag=="Enemy")
+        {
+            audio.PlayOneShot(heartSE);
+        }
+    }
+
+    IEnumerator GameOverScene()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("GameOver");
     }
 }

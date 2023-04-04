@@ -14,6 +14,7 @@ public class Zombie : MonoBehaviour
     private SphereCollider searchArea;
     [SerializeField]
     private float searchAngle = 230f;
+    [SerializeField] AudioClip searchSE;
     AudioSource audiosource;
 
     // Start is called before the first frame update
@@ -28,20 +29,21 @@ public class Zombie : MonoBehaviour
     void FixedUpdate()
     {
         distance = Vector3.Distance(this.transform.position, player.transform.position);
-        if(search==true&& distance > 2)
+        if(search==true)
         {
             animator.SetBool("Run", true);
-            transform.position += transform.forward * 0.07f;
-            this.transform.LookAt(player.transform);   
+            transform.position += transform.forward * 0.056f;
+            this.transform.LookAt(player.transform);
         }
-        if (distance < 1.5)
+        if (distance < 2.0)
         {
             animator.SetTrigger("Attack");
+            transform.position += transform.forward * 0f;
         }
         else
         {
             animator.SetBool("Run", false);
-            transform.position += transform.forward * 0.05f;
+            transform.position += transform.forward * 0.04f;
         }
 
        
@@ -61,15 +63,6 @@ public class Zombie : MonoBehaviour
             search = true;
         }
     }
-
-    private void OnCollidionEnter(Collision other)
-    {
-        if(other.gameObject.tag=="Player")
-        {
-            Debug.Log("aaa");
-        }
-    }
-
 
     private void OnDrawGizmos()
     {
