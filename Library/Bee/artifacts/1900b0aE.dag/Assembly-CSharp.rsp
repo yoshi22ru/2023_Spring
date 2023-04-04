@@ -355,6 +355,7 @@
 "Assets/Script/Compass.cs"
 "Assets/Script/LightCon.cs"
 "Assets/Script/Move.cs"
+"Assets/Script/Zombie.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/CameraController.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/FaceUpdate.cs"
@@ -367,7 +368,6 @@
 "Assets/unity-chan!/Unity-chan! Model/Scripts/ThirdPersonCamera.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/UnityChanControlScriptWithRgidBody.cs"
 "Assets/unity-chan!/Unity-chan! Model/SplashScreen/Scripts/SplashScreen.cs"
-"Assets/Zombie.cs"
 -langversion:9.0
 
 /deterministic
