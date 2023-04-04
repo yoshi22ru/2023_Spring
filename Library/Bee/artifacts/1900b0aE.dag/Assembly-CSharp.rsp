@@ -360,6 +360,7 @@
 "Assets/Script/Move.cs"
 "Assets/Script/RestartGame.cs"
 "Assets/Script/SwitchCamera.cs"
+"Assets/Script/SwitchCamera1.cs"
 "Assets/Script/Zombie.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/CameraController.cs"

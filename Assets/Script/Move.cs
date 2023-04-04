@@ -18,6 +18,7 @@ public class Move : MonoBehaviour
     [SerializeField]
     private SphereCollider searchArea;
     AudioSource audio;
+    Rigidbody rb;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class Move : MonoBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         animator = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
@@ -37,15 +39,14 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             animator.SetBool("Walk", true);
-
             if (Input.GetKey(KeyCode.Space)&&stamina>0)
             {
-                transform.position += transform.forward * 0.07f;
+                transform.position += transform.forward * 0.07f; 
                 stamina = stamina - (Time.deltaTime * 10);
             }
             else
             {
-                transform.position += transform.forward * 0.05f;
+                transform.position += transform.forward * 0.05f;                
             }
         }
         else
@@ -86,10 +87,12 @@ public class Move : MonoBehaviour
         if(Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))
         {
             transform.Rotate(0.0f, 1.5f,0.0f);
+            
+          
         }
         if(Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0.0f, -1.5f,0.0f);
+            transform.Rotate(0.0f, -1.5f,0.0f);            
         }
 
         Debug.DrawRay(ray.origin ,ray.direction*30,Color.red, 5.0f);

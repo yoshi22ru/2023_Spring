@@ -30,9 +30,6 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 walk = new Vector3(0.0f, 0.0f, -60.0f);
-        Vector3 run = new Vector3(0.0f,0.0f,-100.0f);
-
         distance = Vector3.Distance(this.transform.position, player.transform.position);
         if (distance < 2)
         {
@@ -42,15 +39,13 @@ public class Zombie : MonoBehaviour
         if (search==true)
         {
             animator.SetBool("Run", true);
-            //transform.position += transform.forward * 0.056f;
+            transform.position += transform.forward * 0.056f;
             this.transform.LookAt(player.transform);
-            rb.AddForce(run);
         }
         else
         {
             animator.SetBool("Run", false);
-            //transform.position += transform.forward * 0.04f;
-            rb.AddForce(walk);
+            transform.position += transform.forward * 0.04f;
         }     
     }
 
