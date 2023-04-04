@@ -66,7 +66,7 @@ public class Zombie : MonoBehaviour
     {
         if(other.gameObject.tag=="Player")
         {
-           
+            Debug.Log("aaa");
         }
     }
 
