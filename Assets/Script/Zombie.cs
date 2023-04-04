@@ -28,7 +28,7 @@ public class Zombie : MonoBehaviour
     void FixedUpdate()
     {
         distance = Vector3.Distance(this.transform.position, player.transform.position);
-        if(search==true&&distance>1.5)
+        if(search==true&& distance > 2)
         {
             animator.SetBool("Run", true);
             transform.position += transform.forward * 0.07f;
@@ -52,6 +52,13 @@ public class Zombie : MonoBehaviour
         if (other.tag == "Player")
         {
             search = false;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            search = true;
         }
     }
 
