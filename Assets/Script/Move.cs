@@ -102,6 +102,7 @@ public class Move : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+
             StartCoroutine("GameOverScene");
         }
     }
