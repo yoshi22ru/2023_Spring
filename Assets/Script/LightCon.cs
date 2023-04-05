@@ -13,7 +13,7 @@ public class LightCon : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         this.transform.LookAt(targetObject.transform);
     }

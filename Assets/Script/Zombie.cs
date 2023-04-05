@@ -33,6 +33,8 @@ public class Zombie : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(points[0].position);
+
+        this.agent.speed = 1.5f;
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class Zombie : MonoBehaviour
         if(player!=null)
         {
             distance = Vector3.Distance(this.transform.position, player.transform.position);
-            if (distance < 1)
+            if (distance < 2)
             {
                 animator.SetTrigger("Attack");
             }
@@ -50,7 +52,6 @@ public class Zombie : MonoBehaviour
         if (search==true)
         {
             animator.SetBool("Run", true);
-            transform.position += transform.forward * 0.02f;
             this.transform.LookAt(player.transform);
             var dir = player.transform.position - this.transform.position;
             //ターゲットの方向への回転
@@ -59,14 +60,13 @@ public class Zombie : MonoBehaviour
             var offsetRotation = Quaternion.FromToRotation(_forward, Vector3.forward);
             //回転補正　ターゲット方向への回転の順に、自身の向きを操作する
             transform.rotation = lookAtRotation * offsetRotation * Quaternion.Euler(0, 90, 0);
-            animator.SetBool("Movve", true);
+            animator.SetBool("Move", true);
             this.transform.LookAt(player.transform);
             agent.SetDestination(player.transform.position);
         }
         else
         {
             animator.SetBool("Run", false);
-            transform.position += transform.forward * 0.01f;
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
                 GotoNextPoint();
         }     

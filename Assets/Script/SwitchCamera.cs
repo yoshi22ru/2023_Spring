@@ -23,10 +23,10 @@ public class SwitchCamera : MonoBehaviour
 	/// Colliderの範囲に入り続けている間実行され続ける
 	/// </summary>
 	/// <param name="other"></param>
-	private void OnTriggerStay(Collider other)
+	private void OnCollisionStay(Collision other)
 	{
 		// 当たった相手に"Player"タグが付いていた場合
-		if (other.gameObject.tag == "Player")
+		if (other.gameObject.tag == "Enemy")
 		{
 			// 他のvirtualCameraよりも高い優先度にすることで切り替わる
 			virtualCamera.Priority = 100;
@@ -37,10 +37,10 @@ public class SwitchCamera : MonoBehaviour
 	/// Colliderから出たときに実行される
 	/// </summary>
 	/// <param name="other"></param>
-	private void OnTriggerExit(Collider other)
+	private void OnCollisionExit(Collision other)
 	{
 		// 当たった相手に"Player"タグが付いていた場合
-		if (other.gameObject.tag == "Player")
+		if (other.gameObject.tag == "Enemy")
 		{
 			// 元のpriorityに戻す
 			virtualCamera.Priority = defaultPriority;
