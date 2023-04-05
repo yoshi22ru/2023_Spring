@@ -14,6 +14,9 @@ public class Move : MonoBehaviour
     public Slider stamina_slider;
     public GameObject enemy;
     public float distance;
+    public int Coin;
+    public TextMeshProUGUI coin_text;
+
     [SerializeField] AudioClip heartSE;
     [SerializeField]
     private SphereCollider searchArea;
@@ -32,9 +35,9 @@ public class Move : MonoBehaviour
     void FixedUpdate()
     {
         distance = Vector3.Distance(this.transform.position, enemy.transform.position);
-        Ray ray = new Ray(new Vector3(0,1,0),new Vector3(1,0,0));
-        Vector3 origin = ray.origin;
-        Vector3 direction = ray.direction;
+        //Ray ray = new Ray(new Vector3(0,1,0),new Vector3(1,0,0));
+        //Vector3 origin = ray.origin;
+        //Vector3 direction = ray.direction;
 
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
@@ -95,7 +98,9 @@ public class Move : MonoBehaviour
             transform.Rotate(0.0f, -1.5f,0.0f);            
         }
 
-        Debug.DrawRay(ray.origin ,ray.direction*30,Color.red, 5.0f);
+        //Debug.DrawRay(ray.origin ,ray.direction*30,Color.red, 5.0f);
+
+        coin_text.text = "" + Coin + "/7";
     }
 
     private void OnCollisionEnter(Collision other)
