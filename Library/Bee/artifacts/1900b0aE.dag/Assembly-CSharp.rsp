@@ -370,6 +370,7 @@
 "Assets/Script/SwitchCamera.cs"
 "Assets/Script/Timer.cs"
 "Assets/Script/Zombie.cs"
+"Assets/SoundManager.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/CameraController.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/FaceUpdate.cs"

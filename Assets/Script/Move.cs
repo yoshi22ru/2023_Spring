@@ -21,10 +21,10 @@ public class Move : MonoBehaviour
     public bool isRun = false;
     public bool isDead = false;
 
-    [SerializeField] AudioClip heartSE;
+    //[SerializeField] AudioClip heartSE;
     [SerializeField]
     private SphereCollider searchArea;
-    AudioSource audio;
+    //AudioSource audio;
     Rigidbody rb;
 
     void Start()
@@ -32,7 +32,7 @@ public class Move : MonoBehaviour
         Application.targetFrameRate = 120;
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         animator = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -131,7 +131,7 @@ public class Move : MonoBehaviour
     {
         if(other.tag=="Enemy")
         {
-            audio.PlayOneShot(heartSE);
+            //audio.PlayOneShot(heartSE);
         }
     } 
 
