@@ -34,7 +34,7 @@ public class Zombie : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(points[0].position);
 
-        this.agent.speed = 1.5f;
+        this.agent.speed = 1.2f;
     }
 
     // Update is called once per frame
@@ -47,11 +47,15 @@ public class Zombie : MonoBehaviour
             {
                 animator.SetTrigger("Attack");
             }
+            if(distance<0.5)
+            {
+                Destroy(this.gameObject);
+            }
         }
         
         if (search==true)
         {
-            animator.SetBool("Run", true);
+            animator.SetBool("Run", true);   
             this.transform.LookAt(player.transform);
             var dir = player.transform.position - this.transform.position;
             //ターゲットの方向への回転
@@ -72,6 +76,23 @@ public class Zombie : MonoBehaviour
         }     
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            //主人公の方向
+            var playerDirection = other.transform.position - transform.position;
+            //敵の前方からの主人公の方向
+            var angle = Vector3.Angle(transform.forward, playerDirection);
+
+            //サーチする角度内なら発見
+            if (angle > searchAngle)
+            {
+                audio.PlayOneShot(searchSE);
+            }
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Player")
@@ -88,23 +109,6 @@ public class Zombie : MonoBehaviour
             }
         }      
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag=="Player")
-        {
-            //主人公の方向
-            var playerDirection = other.transform.position - transform.position;
-            //敵の前方からの主人公の方向
-            var angle = Vector3.Angle(transform.forward, playerDirection);
-
-            if (angle>searchAngle)
-            {
-                audio.PlayOneShot(searchSE);
-            }
-        }
-    }
-
 
     private void OnTriggerExit(Collider other)
     { 

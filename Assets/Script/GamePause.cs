@@ -8,6 +8,8 @@ public class GamePause : MonoBehaviour
 {
     [SerializeField] GameObject pause_menu;
     [SerializeField] GameObject cross;
+    [SerializeField] GameObject text;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class GamePause : MonoBehaviour
             Time.timeScale = 0;
             pause_menu.SetActive(true);
             cross.SetActive(false);
+            text.SetActive(false);
         }
         
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -29,6 +32,7 @@ public class GamePause : MonoBehaviour
             Time.timeScale = 1;
             pause_menu.SetActive(false);
             cross.SetActive(true);
+            text.SetActive(true);
         }
 
     }

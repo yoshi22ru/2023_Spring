@@ -6,9 +6,17 @@ using Cinemachine;
 
 public class SwitchCamera : MonoBehaviour
 {
+	public Move player;
+
 	[SerializeField]
-	[Tooltip("切り替え後のカメラ")]
-	private CinemachineVirtualCamera virtualCamera;
+	private CinemachineVirtualCamera DeadCamera;
+	[SerializeField]
+	private CinemachineVirtualCamera IdleCamera;
+	[SerializeField]
+	private CinemachineVirtualCamera WalkCamera;
+	[SerializeField]
+	private CinemachineVirtualCamera RunCamera;
+
 
 	// 切り替え後のカメラの元々のPriorityを保持しておく
 	private int defaultPriority;
@@ -16,35 +24,42 @@ public class SwitchCamera : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		defaultPriority = virtualCamera.Priority;
+		defaultPriority = IdleCamera.Priority;
 	}
 
-	/// <summary>
-	/// Colliderの範囲に入り続けている間実行され続ける
-	/// </summary>
-	/// <param name="other"></param>
-	private void OnCollisionStay(Collision other)
+	void FixedUpdate()
 	{
-		// 当たった相手に"Player"タグが付いていた場合
-		if (other.gameObject.tag == "Enemy")
+		if (player.isIdle == true)
 		{
-			// 他のvirtualCameraよりも高い優先度にすることで切り替わる
-			virtualCamera.Priority = 100;
+			IdleCamera.Priority = 100;
+		}
+		else
+		{
+			IdleCamera.Priority = defaultPriority;
+		}
+		if (player.isWalk == true)
+		{
+			WalkCamera.Priority = 100;
+		}
+		else
+		{
+			WalkCamera.Priority = defaultPriority;
+		}
+		if (player.isRun == true)
+		{
+			RunCamera.Priority = 100;
+		}
+		else
+		{
+			RunCamera.Priority = defaultPriority;
+		}
+		if (player.isDead == true)
+		{
+			DeadCamera.Priority = 100;
+		}
+		else
+		{
+			DeadCamera.Priority = defaultPriority;
 		}
 	}
-
-	/// <summary>
-	/// Colliderから出たときに実行される
-	/// </summary>
-	/// <param name="other"></param>
-	private void OnCollisionExit(Collision other)
-	{
-		// 当たった相手に"Player"タグが付いていた場合
-		if (other.gameObject.tag == "Enemy")
-		{
-			// 元のpriorityに戻す
-			virtualCamera.Priority = defaultPriority;
-		}
-	}
-
 }

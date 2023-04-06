@@ -16,6 +16,10 @@ public class Move : MonoBehaviour
     public float distance;
     public int Coin;
     public TextMeshProUGUI coin_text;
+    public bool isIdle = false;
+    public bool isWalk = false;
+    public bool isRun = false;
+    public bool isDead = false;
 
     [SerializeField] AudioClip heartSE;
     [SerializeField]
@@ -46,15 +50,23 @@ public class Move : MonoBehaviour
             {
                 transform.position += transform.forward * 0.07f; 
                 stamina = stamina - (Time.deltaTime * 10);
+                isWalk = false;
+                isIdle = false;
+                isRun = true;
+                
             }
             else
             {
-                transform.position += transform.forward * 0.05f;                
+                transform.position += transform.forward * 0.05f;
+                isWalk = true;
+                isIdle = false;
+                isRun = false;
             }
         }
         else
         {
             animator.SetBool("Walk", false);
+            isIdle = true;
         }
 
         if(Input.GetKey(KeyCode.Space))
@@ -81,6 +93,7 @@ public class Move : MonoBehaviour
         {
             animator.SetBool("Back", true);
             transform.position -= transform.forward * 0.05f;
+            isWalk = true;
         }
         else
         {
@@ -90,12 +103,13 @@ public class Move : MonoBehaviour
         if(Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))
         {
             transform.Rotate(0.0f, 1.5f,0.0f);
-            
+            //isWalk = false;
           
         }
         if(Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0.0f, -1.5f,0.0f);            
+            transform.Rotate(0.0f, -1.5f,0.0f);
+            //isWalk = false;
         }
 
         //Debug.DrawRay(ray.origin ,ray.direction*30,Color.red, 5.0f);
@@ -107,7 +121,6 @@ public class Move : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-
             StartCoroutine("GameOverScene");
         }
     }
@@ -122,7 +135,8 @@ public class Move : MonoBehaviour
 
     IEnumerator GameOverScene()
     {
-        yield return new WaitForSeconds(1);
+        isDead = true;
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("GameOver");
     }
 }
