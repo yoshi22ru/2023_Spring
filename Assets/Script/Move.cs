@@ -67,9 +67,10 @@ public class Move : MonoBehaviour
         {
             animator.SetBool("Walk", false);
             isIdle = true;
+            isWalk = false;
         }
 
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space)&&stamina>0)
         {
             animator.SetBool("Run", true);
         }
@@ -93,22 +94,23 @@ public class Move : MonoBehaviour
         {
             animator.SetBool("Back", true);
             transform.position -= transform.forward * 0.05f;
-            isWalk = true;
+            //isWalk = true;
         }
         else
         {
             animator.SetBool("Back",false);
+            //isWalk = false;
         }
 
         if(Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0.0f, 1.5f,0.0f);
+            transform.Rotate(0.0f, 1.5f,0.0f); //
             //isWalk = false;
           
         }
         if(Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0.0f, -1.5f,0.0f);
+            transform.Rotate(0.0f, -1.5f,0.0f); //
             //isWalk = false;
         }
 

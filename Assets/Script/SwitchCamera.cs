@@ -16,50 +16,115 @@ public class SwitchCamera : MonoBehaviour
 	private CinemachineVirtualCamera WalkCamera;
 	[SerializeField]
 	private CinemachineVirtualCamera RunCamera;
-
-
-	// Ø‚è‘Ö‚¦Œã‚ÌƒJƒƒ‰‚ÌŒ³X‚ÌPriority‚ð•ÛŽ‚µ‚Ä‚¨‚­
-	private int defaultPriority;
-
+	
+	
 	// Start is called before the first frame update
 	void Start()
 	{
-		defaultPriority = IdleCamera.Priority;
+
 	}
 
+	void SetDisenableAllCamera()
+    {
+		//DeadCamera.enable = false;
+		//IdleCamera.enable = false;
+		//RunCamera.enable = false;
+		//WalkCamera.enable = false;
+    }
+
+	int Camera_index = 0;
 	void FixedUpdate()
 	{
-		if (player.isIdle == true)
+		Debug.Log(Camera_index);
+		
+
+		//IdleCamera.Priority = 100;
+		//WalkCamera.Priority = 0;
+		//RunCamera.Priority = 0;
+		//DeadCamera.Priority = 0;
+		
+
+		//if (Input.GetKeyDown(KeyCode.P))
+        //{
+		//	_index = (_index + 1) % 4;
+		//	
+
+		//	Debug.Log($"switch->{_index}");
+		//	Debug.Log($"switch->{(IdleCamera.Priority, WalkCamera.Priority, RunCamera.Priority, DeadCamera.Priority)}");
+		//}
+		//return;
+
+		if (!player.isDead)
+        {
+			
+			if (player.isWalk)
+			{
+				if (player.isRun)
+				{
+					Camera_index = 2;
+				}
+				else
+				{
+					Camera_index = 1;
+				}
+			}
+			else
+			{
+				// idle
+				Camera_index = 0;
+			}
+			//Camera_index = 1;
+		}
+        else
+        {
+			// dead
+			Camera_index = 3;
+        }
+		
+
+		/*if (player.isIdle == true)
 		{
-			IdleCamera.Priority = 100;
+			//IdleCamera.Priority = 100;
+			Camera_index = 0;
 		}
 		else
 		{
-			IdleCamera.Priority = defaultPriority;
+			//IdleCamera.Priority = defaultPriority;
 		}
 		if (player.isWalk == true)
 		{
-			WalkCamera.Priority = 100;
+			//WalkCamera.Priority = 100;
+			Camera_index = 1;
 		}
 		else
 		{
-			WalkCamera.Priority = defaultPriority;
+			//WalkCamera.Priority = defaultPriority;
 		}
 		if (player.isRun == true)
 		{
-			RunCamera.Priority = 100;
+			//RunCamera.Priority = 100;
+			Camera_index = 2;
 		}
 		else
 		{
-			RunCamera.Priority = defaultPriority;
+			//RunCamera.Priority = defaultPriority;
 		}
 		if (player.isDead == true)
 		{
-			DeadCamera.Priority = 100;
+			//DeadCamera.Priority = 100;
+			//DeadCamera.Priority = 100;
+			Camera_index = 3;
 		}
 		else
 		{
-			DeadCamera.Priority = defaultPriority;
-		}
+			//DeadCamera.Priority = defaultPriority;
+		}*/
+
+		IdleCamera.Priority = Camera_index == 0 ? 100 : 0;
+		WalkCamera.Priority = Camera_index == 1 ? 100 : 0;
+		RunCamera.Priority = Camera_index == 2 ? 100 : 0;
+		DeadCamera.Priority = Camera_index == 3 ? 100 : 0;
+
+		
 	}
 }

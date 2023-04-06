@@ -5,6 +5,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    public Move player;
     private TextMeshProUGUI timerText;
     private float second;
     private float minute;
@@ -17,7 +18,8 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        second += Time.deltaTime;
+            second += Time.deltaTime;
+        
         if(minute>60)
         {
             hour++;

@@ -118,12 +118,6 @@ public class Zombie : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Handles.color = Color.red;
-        Handles.DrawSolidArc(transform.position, Vector3.up, Quaternion.Euler(0f, -searchAngle, 0f) * transform.forward, searchAngle * 2f, searchArea.radius);
-    }
-
     void GotoNextPoint()
     {
         //ínì_Ç™âΩÇ‡ê›íËÇ≥ÇÍÇƒÇ¢Ç»Ç¢éûÇ…ï‘Ç∑
