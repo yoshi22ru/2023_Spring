@@ -370,6 +370,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/GlitchFx-master/GlitchFx-master/Assets/Reaktion/Editor/Utility/ConstantMotionEditor.cs"
 "Assets/GlitchFx-master/GlitchFx-master/Assets/Reaktion/Editor/Utility/JitterMotionEditor.cs"
+"Assets/SlimUI/Editor/SlimUIWindow.cs"
 "Assets/unity-chan!/Unity-chan! Model/Editor/CreateLocatorHere.cs"
 -langversion:9.0
 

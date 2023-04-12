@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.AI;
+using Unity.VisualScripting;
 
 public class Zombie : MonoBehaviour
 {
@@ -15,23 +16,36 @@ public class Zombie : MonoBehaviour
     private SphereCollider searchArea;
     [SerializeField]
     private float searchAngle = 230f;
-    [SerializeField] AudioClip searchSE;
-    AudioSource audio;
     Rigidbody rb;
     private NavMeshAgent agent;
-    [SerializeField] private Vector3 _forward=Vector3.forward;
+    [SerializeField] 
+    private Vector3 _forward=Vector3.forward;
+    [SerializeField]
+    SoundManager soundManager;
+    [SerializeField]
+    GameObject soundManagerObj;
+    [SerializeField]
+    AudioClip attackSe;
+    [SerializeField]
+    AudioClip searchSe;
+    [SerializeField]
+    AudioClip dangerBgm;
+    [SerializeField]
+    AudioClip stageBgm;
+
     public Transform[] points;
     public int destPoint;
-
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        soundManagerObj = GameObject.FindGameObjectWithTag("SoundManager");
+        soundManagerObj.GetComponent<SoundManager>();
         animator = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
+        soundManager = soundManagerObj.GetComponent<SoundManager>(); 
         agent.SetDestination(points[0].position);
 
         this.agent.speed = 1.2f;
@@ -43,11 +57,12 @@ public class Zombie : MonoBehaviour
         if(player!=null)
         {
             distance = Vector3.Distance(this.transform.position, player.transform.position);
-            if (distance < 2)
+            if (distance < 2.5)
             {
-                animator.SetTrigger("Attack");
+                animator.SetTrigger("Attack");       
+                this.agent.speed = 0.0f;
             }
-            if(distance<0.5)
+            if(distance<1)
             {
                 Destroy(this.gameObject);
             }
@@ -76,20 +91,13 @@ public class Zombie : MonoBehaviour
         }     
     }
 
-    private void OnTriggerEnter(Collider other)
+     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
-        {
-            //主人公の方向
-            var playerDirection = other.transform.position - transform.position;
-            //敵の前方からの主人公の方向
-            var angle = Vector3.Angle(transform.forward, playerDirection);
-
-            //サーチする角度内なら発見
-            if (angle > searchAngle)
-            {
-                audio.PlayOneShot(searchSE);
-            }
+        {        
+             soundManager.PlaySe(searchSe);
+             soundManager.StopBgm(stageBgm); 
+             soundManager.PlayBgm(dangerBgm);
         }
     }
 
@@ -115,6 +123,11 @@ public class Zombie : MonoBehaviour
         if (other.tag == "Player")
         {
             search = false;
+            if(search==false)
+            {
+                soundManager.PauseBgm(dangerBgm);
+                soundManager.PlayBgm(stageBgm);
+            }
         }
     }
 

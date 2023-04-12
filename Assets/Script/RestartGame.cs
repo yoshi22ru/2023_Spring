@@ -5,14 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-    [SerializeField]AudioClip deadSE;
-    AudioSource audio;
+    [SerializeField] GameObject soundManagerObj;
+    [SerializeField] SoundManager soundManager;
+    [SerializeField] AudioClip deadSe;
+    [SerializeField] AudioClip replaySe;
 
     // Start is called before the first frame update
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-        audio.PlayOneShot(deadSE);
+        soundManagerObj = GameObject.FindGameObjectWithTag("SoundManager");
+        soundManagerObj.GetComponent<SoundManager>();
+        soundManager = soundManagerObj.GetComponent<SoundManager>();
+        soundManager.PlaySe(deadSe);
     }
 
     // Update is called once per frame
@@ -20,6 +24,7 @@ public class RestartGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            soundManager.PlaySe(replaySe);
             SceneManager.LoadScene("GameStart");
         }
     }

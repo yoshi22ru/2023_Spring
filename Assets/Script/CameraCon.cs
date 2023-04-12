@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class CameraCon : MonoBehaviour
 {
-    public Move player;
+   
     [SerializeField] GameObject text_coin_text;
+    [SerializeField] GameObject soundManagerObj;
+    [SerializeField] SoundManager soundManager;
+    [SerializeField] AudioClip getSe;
+
+    public Move player;
+    public Camera MainCamera;
     public GameObject target;
+    private Vector3 lastMousePosition;
+    private Vector3 newAngle = new Vector3(0, 0, 0);
+
+    private void Start()
+    {
+        soundManagerObj = GameObject.FindGameObjectWithTag("SoundManager");
+        soundManagerObj.GetComponent<SoundManager>();
+        soundManager=soundManagerObj.GetComponent<SoundManager>();
+    }
 
 
     void FixedUpdate()
@@ -21,6 +36,7 @@ public class CameraCon : MonoBehaviour
                 if(Input.GetMouseButton(0))
                 {
                     player.Coin += 1;
+                    soundManager.PlaySe(getSe);
                     Destroy(hit.collider.gameObject);
                     text_coin_text.SetActive(false);
                 }

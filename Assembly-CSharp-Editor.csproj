@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GlitchFx-master\GlitchFx-master\Assets\Reaktion\Editor\Utility\ConstantMotionEditor.cs" />
+    <Compile Include="Assets\SlimUI\Editor\SlimUIWindow.cs" />
     <Compile Include="Assets\GlitchFx-master\GlitchFx-master\Assets\Reaktion\Editor\Utility\JitterMotionEditor.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Editor\CreateLocatorHere.cs" />
   </ItemGroup>

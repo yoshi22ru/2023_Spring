@@ -57,25 +57,37 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\RestartGame.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\OptionsMenuNew.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckSFXVolume.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
+    <Compile Include="Assets\Script\SoundSlider.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ResetDemo.cs" />
     <Compile Include="Assets\Script\SwitchCamera.cs" />
     <Compile Include="Assets\Script\Compass.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
     <Compile Include="Assets\GlitchFx-master\GlitchFx-master\Assets\Reaktion\Utility\ConstantMotion.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\Script\MultiSwitchCamera.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemedUI.cs" />
     <Compile Include="Assets\Script\CameraCon.cs" />
     <Compile Include="Assets\Script\LightCon.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ExtraLinks.cs" />
     <Compile Include="Assets\GlitchFx-master\GlitchFx-master\Assets\Reaktion\Utility\JitterMotion.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemedUIData.cs" />
+    <Compile Include="Assets\Script\SettingUI.cs" />
+    <Compile Include="Assets\Script\MouseCamera.cs" />
     <Compile Include="Assets\Script\SoundManager.cs" />
     <Compile Include="Assets\Script\GameStart.cs" />
     <Compile Include="Assets\Script\Zombie.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
     <Compile Include="Assets\Script\DoorAnim.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemedUIElement.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\MainMenuNew.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
     <Compile Include="Assets\GlitchFx-master\GlitchFx-master\Assets\GlitchFx\GlitchFx.cs" />
@@ -84,8 +96,8 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Move.cs" />
-    <Compile Include="Assets\Script\SettingUI.cs" />
-    <Compile Include="Assets\Script\SoundSlider.cs" />
+    <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
+    <Compile Include="Assets\Script\BreakFloor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

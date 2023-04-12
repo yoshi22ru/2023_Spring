@@ -12,13 +12,14 @@ public class SoundSlider : MonoBehaviour
 
     void Start()
     {
+        BgmLoadSlider();
+        SeLoadSlider();
 
     }
      void FixedUpdate()
-    {
-        BgmLoadSlider();
-        SeLoadSlider();
-    }
+     {       
+       
+     }
 
 
 

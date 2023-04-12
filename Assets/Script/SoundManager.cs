@@ -5,10 +5,13 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     //前提:変数は他のクラスに公開しない
-    public AudioSource bgmAudioSource;
-    public AudioSource seAudioSource;
+    [SerializeField] AudioSource bgmAudioSource;
+    [SerializeField] AudioSource seAudioSource;
 
     public static SoundManager instance;
+    public float span = 3f;
+    private float currentTime = 0f;
+    public bool isSe;
 
     private void Awake()
     {
@@ -55,6 +58,17 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    void Update()
+    {
+        currentTime += Time.deltaTime;
+        if(currentTime > span)
+        {
+            isSe = true;
+            currentTime = 0f;
+        }
+        isSe = false;
+    }
+
     GameObject CheckOtherSoundManager()
     {
         return GameObject.FindGameObjectWithTag("SoundManager");
@@ -71,13 +85,13 @@ public class SoundManager : MonoBehaviour
         bgmAudioSource.Play();
     }
 
-    public void PlayeSe(AudioClip clip)
+    public void PlaySe(AudioClip clip)
     {
         if(clip==null)
         {
             return;
         }
-        seAudioSource.PlayOneShot(clip);
+            seAudioSource.PlayOneShot(clip);     
     }
 
     public void StopBgm(AudioClip clip)

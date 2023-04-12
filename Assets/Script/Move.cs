@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using Unity.VisualScripting;
 
 public class Move : MonoBehaviour
 {
@@ -21,10 +21,12 @@ public class Move : MonoBehaviour
     public bool isRun = false;
     public bool isDead = false;
 
-    //[SerializeField] AudioClip heartSE;
-    [SerializeField]
-    private SphereCollider searchArea;
-    //AudioSource audio;
+    [SerializeField] AudioClip fastHeartBgm;
+    [SerializeField] AudioClip semiFastHeartBgm;
+    [SerializeField] AudioClip slowHeartBgm;
+    [SerializeField] private SphereCollider searchArea;
+    [SerializeField] SoundManager soundManager;
+    [SerializeField] GameObject soundManagerObj;
     Rigidbody rb;
 
     void Start()
@@ -32,13 +34,15 @@ public class Move : MonoBehaviour
         Application.targetFrameRate = 120;
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         animator = GetComponent<Animator>();
-        //audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
+        soundManagerObj=GameObject.FindGameObjectWithTag("SoundManager");
+        soundManagerObj.GetComponent<SoundManager>();
+        soundManager=soundManagerObj.GetComponent<SoundManager>();      
     }
 
     void FixedUpdate()
     {
-        distance = Vector3.Distance(this.transform.position, enemy.transform.position);
+        //distance = Vector3.Distance(this.transform.position, enemy.transform.position);
         //Ray ray = new Ray(new Vector3(0,1,0),new Vector3(1,0,0));
         //Vector3 origin = ray.origin;
         //Vector3 direction = ray.direction;
@@ -104,36 +108,31 @@ public class Move : MonoBehaviour
 
         if(Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(0.0f, 1.5f,0.0f); //
+            transform.Rotate(0.0f, 2.5f,0.0f); //
             //isWalk = false;
           
         }
         if(Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(0.0f, -1.5f,0.0f); //
+            transform.Rotate(0.0f, -2.5f,0.0f); //
             //isWalk = false;
         }
 
         //Debug.DrawRay(ray.origin ,ray.direction*30,Color.red, 5.0f);
 
-        coin_text.text = "" + Coin + "/7";
+        coin_text.text = "" + Coin + "/5";
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Enemy")
         {
+            soundManager.StopBgm(fastHeartBgm);
             StartCoroutine("GameOverScene");
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag=="Enemy")
-        {
-            //audio.PlayOneShot(heartSE);
-        }
     } 
+    
+
 
     IEnumerator GameOverScene()
     {

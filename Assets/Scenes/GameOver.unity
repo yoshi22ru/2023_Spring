@@ -597,7 +597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584b0d107b9bc9b429a37d596dae1f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadSE: {fileID: 8300000, guid: 286d9e79ac11181458ea4e5d03344cdb, type: 3}
+  soundManagerObj: {fileID: 0}
+  soundManager: {fileID: 0}
+  deadSe: {fileID: 8300000, guid: 286d9e79ac11181458ea4e5d03344cdb, type: 3}
+  replaySe: {fileID: 8300000, guid: bd73007e803e4fb4192567b7e05b3b45, type: 3}
 --- !u!81 &1445931521
 AudioListener:
   m_ObjectHideFlags: 0

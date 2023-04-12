@@ -10,12 +10,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject pause_menu;
     [SerializeField] GameObject cross;
     [SerializeField] GameObject text;
+    //[SerializeField] GameObject player;
     [SerializeField] GameObject soundManagerObj;
     [SerializeField] SoundManager soundManager;
     [SerializeField] AudioClip stageBgm;
+    [SerializeField] AudioClip dangerBgm;
+    [SerializeField] AudioClip pauseSe;
+    [SerializeField] AudioClip restartSe;
+    [SerializeField] AudioClip retrySe;
 
     public bool paused=false;
-
+    public Move move;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +36,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+
+        if(Input.GetKeyDown(KeyCode.Tab)&&paused==false)
         {
             paused = true;
             Time.timeScale = 0;
@@ -39,26 +45,40 @@ public class GameManager : MonoBehaviour
             cross.SetActive(false);
             text.SetActive(false);
             soundManager.PauseBgm(stageBgm);
+            soundManager.PauseBgm(dangerBgm) ;
+            soundManager.PlaySe(pauseSe);
         }
 
         if (paused == true)
         {
             if (Input.GetKeyDown(KeyCode.R))
-            { 
+            {
+                paused = false;
+                Time.timeScale = 1;
+                soundManager.StopBgm(stageBgm);
+                soundManager.StopBgm(dangerBgm);
+                soundManager.PlaySe(retrySe);
                 SceneManager.LoadScene("GameStart");
                 Cursor.visible = false;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&&paused==true)
         {
             paused = false;
             Time.timeScale = 1;
             pause_menu.SetActive(false);
             cross.SetActive(true);
             text.SetActive(true);
+            soundManager.UnPauseBgm(dangerBgm);
             soundManager.UnPauseBgm(stageBgm);
+            soundManager.PlaySe(restartSe);
         }
 
+        if(move.isDead==true)
+        {
+            soundManager.StopBgm(stageBgm);
+            Cursor.visible = true;
+        }
     }
 }
